@@ -1,6 +1,7 @@
 #
 # Author:: Adam Jacob (<adam@opscode.com>)
 # Author:: Seth Falcon (<seth@opscode.com>)
+# Author:: Kyle Goodwin (<kgoodwin@primerevenue.com>)
 # Copyright:: Copyright 2008-2010 Opscode, Inc.
 # License:: Apache License, Version 2.0
 #
@@ -115,6 +116,9 @@ class Chef
 
     # Ifconfig failed
     class Ifconfig < RuntimeError; end
+
+    class InvalidEnvironmentPath < ArgumentError; end
+    class EnvironmentNotFound < RuntimeError; end
 
     # Invalid "source" parameter to a remote_file resource
     class InvalidRemoteFileURI < ArgumentError; end
